@@ -1,33 +1,98 @@
-*{
-	padding: 0;
-	margin: 0;
-	outline:0;
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
-.container{
-	height: 100vh;
-	width: 100vw;
-	text-align:center;
-	color:#333;
-	background: pink;
 
+body, html {
+    height: 100%; /* Ensure full height for the container */
 }
-.love,.yes,.no{padding-top: 15%;
-		
-		}
-.love span{color:red;}
-h2{font-size: 50px;margin-bottom: 20px;}
-a{font-size: 24px;text-decoration: none;padding: 5px 10px;
-	margin-top: 20px;border:3px solid #ddd; border-radius: 10px;}
-#no{color:red; background: #eee;margin-right: 50px;}
-#yes{color:green;background: #eee;}
 
-.yes img{
-	height: 30px;
-	width: 30px;
-	animation: image 4s linear infinite;
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    color: #333;
+    background: pink;
+    padding: 20px; /* Add some padding for better spacing on mobile */
 }
-@keyframes image{
-	0%{transform: scale(.5);}
-	50%{transform: scale(1.5);}
-	100%{transform: scale(.5);}
+
+.love, .yes, .no {
+    padding-top: 0; /* Ensure no extra padding to maintain central position */
+}
+
+.love span {
+    color: red;
+}
+
+h2 {
+    font-size: 5vw; /* Responsive font size relative to viewport */
+    margin-bottom: 20px;
+}
+
+a {
+    font-size: 4vw; /* Responsive font size */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    display: inline-block; /* Ensure the links are displayed as buttons */
+}
+
+#no {
+    color: red;
+    background: #eee;
+    margin-right: 20px;
+}
+
+#yes {
+    color: green;
+    background: #eee;
+}
+
+.yes img {
+    height: 30px;
+    width: 30px;
+    animation: image 4s linear infinite;
+}
+
+@keyframes image {
+    0% { transform: scale(0.5); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(0.5); }
+}
+
+/* Media Query for smaller screens (tablets & phones) */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 7vw;
+    }
+    
+    a {
+        font-size: 5vw;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Media Query for very small screens (e.g., smartphones in portrait mode) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 8vw;
+    }
+
+    a {
+        font-size: 6vw;
+        padding: 8px 15px; /* Reduce padding to fit better on small screens */
+    }
 }
