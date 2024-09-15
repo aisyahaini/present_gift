@@ -139,3 +139,6 @@
     font-size: 120px;
     line-height: 120px;
   }
+  .insede a{
+    display: none;
+  }
