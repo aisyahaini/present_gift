@@ -62,6 +62,14 @@ a {
     animation: image 4s linear infinite;
 }
 
+footer{
+    background-color: pink;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
+
 @keyframes image {
     0% { transform: scale(0.5); }
     50% { transform: scale(1.5); }

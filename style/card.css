@@ -142,3 +142,11 @@
   .insede a{
     display: none;
   }
+
+  footer{
+    background-color: pink;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
